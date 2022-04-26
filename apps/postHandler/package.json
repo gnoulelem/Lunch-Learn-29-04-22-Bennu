@@ -1,0 +1,20 @@
+{
+  "name": "posthandler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "dapr run --app-id postHandler --components-path ../../components --app-port 3000 --dapr-http-port 3500 node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gnoulelem SIBABI",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dapr-client": "^2.1.0",
+    "express": "^4.16.4",
+    "nanoid": "^3.3.3"
+  }
+}
