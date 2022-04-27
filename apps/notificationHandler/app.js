@@ -25,8 +25,10 @@ const notificationProcessor = (req, res) => {
   };
   res.writeHead(200, headers);
 
-  const data = `data: ${JSON.stringify(notifications)}\n\n`;
-  res.write(data);
+  notifications.forEach((notification) => {
+    const data = `data: ${JSON.stringify(notification)}\n\n`;
+    res.write(data);
+  });
 
   const clientId = Date.now();
 

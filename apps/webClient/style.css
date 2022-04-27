@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 44px;
+}
+
+.notifications-title {
+    font-size: 34px;
+}
+
+.notification {
+    background-color:rgb(214, 214, 214);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    width: 30%;
+}
