@@ -8,8 +8,25 @@
   <body>
     <div class="page-title">Lunch & Learn :: DAPR :: Notification system Demo</div>
     <p class="notifications-title">Notifications</p>
-    <div id="content"></div>
-
+    <div class="notifications">
+      <div id="content"></div>
+      <div class="notification-form">
+        <form id="notification-form">
+          <div>
+            <input class="notification-form-input" id="title" name="title" type="text" placeholder="Post title" />
+          </div>
+          <br>
+          <div>
+            <input class="notification-form-input" id="message" name="message" type="text" placeholder="Post message" />
+          </div>
+          <br>
+          <div>
+            <input type="submit" value="Send post">
+          </div>
+        </form>
+      </div>
+    </div>
+    
     <script src="./script.js" defer></script>
   </body>
 </html>

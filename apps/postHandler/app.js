@@ -1,6 +1,7 @@
 import express from 'express';
 import { nanoid } from 'nanoid';
 import { DaprClient, CommunicationProtocolEnum } from 'dapr-client';
+import cors from 'cors';
 
 const DAPR_PORT = process.env.DAPR_HTTP_PORT || 3500;
 const DAPR_HOST = '127.0.0.1';
@@ -12,6 +13,7 @@ const SERVER_PORT = 3000;
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.post('/newpost', async (req, res) => {
   const data = req.body;
@@ -55,7 +57,9 @@ const publishPostToKafka = async (data) => {
 };
 
 const startServer = () => {
-  app.listen(SERVER_PORT, () => console.log(`PostHandler listening on port ${SERVER_PORT}!`));
+  app.listen(SERVER_PORT, () =>
+    console.log(`PostHandler listening on port ${SERVER_PORT}!`)
+  );
 };
 
 startServer();
